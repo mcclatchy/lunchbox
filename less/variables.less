@@ -64,3 +64,30 @@
 @theme4-sq-logo-height: 96px;
 @theme4-16x9-logo-width: 100px;
 @theme4-16x9-logo-height: 80px;
+
+//Market information
+//I can take these elements and swap in the color names for market names
+
+// v TO-DO v
+/* The above theme styles should be refactored to be dynamic based on market names
+and we can drop a separate market themes .less file into this directory which can
+properly hold all the elements. We'll add a series of mixins that represent each
+market attribute and a default case to back everything up. Likewise the same attributes
+can be used to set the file path and we can have the logos in that directory */
+@main-green:#0f0;
+@main-red:#f00;
+@main-color:"main-@{myColor}";
+.mixIN(@color){
+	@myColor:@color;
+}
+html .poster{
+	.mixIN("green");
+	color:@@main-color;
+}
+/*
+
+We're going to store the market slugs as paths for alternating between
+the logos. We'll also declare a palette of market colors for the theme
+sets. We'll end up with all the logos in a a /img/@mkt/ folder
+
+*/
