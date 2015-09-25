@@ -4,6 +4,8 @@ import json
 from mimetypes import guess_type
 import os
 import subprocess
+# Adding Cookies in order to remember cross-market selections
+import Cookie
 
 from flask import abort, make_response
 
