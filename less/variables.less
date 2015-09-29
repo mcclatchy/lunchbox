@@ -76,12 +76,13 @@ market attribute and a default case to back everything up. Likewise the same att
 can be used to set the file path and we can have the logos in that directory */
 @main-green:#0f0;
 @main-red:#f00;
+@myColor:"red";
 @main-color:"main-@{myColor}";
 .mixIN(@color){
 	@myColor:@color;
 }
 html .poster{
-	.mixIN("green");
+	.mixIN("red");
 	color:@@main-color;
 }
 /*
